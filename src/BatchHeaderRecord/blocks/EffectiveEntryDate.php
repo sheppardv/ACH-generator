@@ -1,10 +1,10 @@
 <?php
 
-namespace ach\fileControlRecord\blocks;
+namespace ach\BatchHeaderRecord\blocks;
 
 use ach\block\FillableNumericBlock;
 
-class BlockCount extends FillableNumericBlock
+class EffectiveEntryDate extends FillableNumericBlock
 {
     public function getRequiredLength()
     {

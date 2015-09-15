@@ -11,7 +11,7 @@ class FileCreationTime extends FillableBlock
         parent::__construct($date);
     }
 
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 4;
     }

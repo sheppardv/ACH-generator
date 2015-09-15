@@ -2,18 +2,12 @@
 
 namespace ach\header\blocks;
 
-use ach\block\FillableBlock;
+use ach\block\FillableAlphamericBlock;
 
-class ImmediateOriginName extends FillableBlock
+class ImmediateOriginName extends FillableAlphamericBlock
 {
-
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 23;
-    }
-
-    protected function setContent($immediateOriginName)
-    {
-        $this->_content = str_pad($immediateOriginName, $this->getRequiredLength());
     }
 }

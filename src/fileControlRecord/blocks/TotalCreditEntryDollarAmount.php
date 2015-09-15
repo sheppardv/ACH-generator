@@ -2,25 +2,12 @@
 
 namespace ach\fileControlRecord\blocks;
 
-use ach\block\FillableBlock;
+use ach\block\FillableNumericBlock;
 
-class TotalCreditEntryDollarAmount extends FillableBlock
+class TotalCreditEntryDollarAmount extends FillableNumericBlock
 {
-    protected $_allowed_characters_regexp = "/^[0-9]+$/";
-    
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 12;
-    }
-
-    protected function setContent($totalCreditEntryDollarAmount)
-    {
-        $totalCreditEntryDollarAmount = strval($totalCreditEntryDollarAmount);
-        $this->_content = str_pad(
-            $totalCreditEntryDollarAmount,
-            $this->getRequiredLength(),
-            '0',
-            STR_PAD_LEFT
-        );
     }
 }

@@ -9,7 +9,7 @@
 namespace ach\block;
 
 
-abstract class FillableBlock extends Block
+abstract class FillableAlphamericBlock extends FillableBlock
 {
 
     /**
@@ -19,13 +19,13 @@ abstract class FillableBlock extends Block
     function __construct($content)
     {
         $this->setContent($content);
+        $this->fillContent();
         $this->_content = strtoupper($this->_content);
         $this->validateContent();
     }
 
-
-    protected function setContent($content)
+    protected function fillContent()
     {
-        $this->_content = strval($content);
+        $this->_content = str_pad($this->_content, $this->getRequiredLength());
     }
 }

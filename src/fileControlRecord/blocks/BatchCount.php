@@ -2,26 +2,13 @@
 
 namespace ach\fileControlRecord\blocks;
 
-use ach\block\FillableBlock;
+use ach\block\FillableNumericBlock;
 
-class BatchCount extends FillableBlock
+class BatchCount extends FillableNumericBlock
 {
 
-    protected $_allowed_characters_regexp = "/^[0-9]+$/";
-
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 6;
-    }
-
-    protected function setContent($totalNumberOfBatchHeaders)
-    {
-        $totalNumberOfBatchHeaders = strval($totalNumberOfBatchHeaders);
-        $this->_content = str_pad(
-            $totalNumberOfBatchHeaders,
-            $this->getRequiredLength(),
-            '0',
-            STR_PAD_LEFT
-        );
     }
 }

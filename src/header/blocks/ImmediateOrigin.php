@@ -7,7 +7,7 @@ use ach\block\FillableBlock;
 class ImmediateOrigin extends FillableBlock
 {
 
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 10;
     }

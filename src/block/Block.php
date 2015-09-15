@@ -17,7 +17,7 @@ abstract class Block
 
     protected $_content;
 
-    abstract protected function getRequiredLength();
+    abstract public function getRequiredLength();
 
     protected function hasContentAllowedCharacters()
     {

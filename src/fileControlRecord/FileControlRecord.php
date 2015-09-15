@@ -4,12 +4,12 @@ namespace ach\fileControlRecord;
 
 use ach\block\Block;
 
+use ach\commonBlocks\RecordTypeCode;
+use ach\commonBlocks\Reserved;
 use ach\fileControlRecord\blocks\BatchCount;
 use ach\fileControlRecord\blocks\BlockCount;
 use ach\fileControlRecord\blocks\EntryAddendaCount;
 use ach\fileControlRecord\blocks\EntryHash;
-use ach\fileControlRecord\blocks\RecordTypeCode;
-use ach\fileControlRecord\blocks\Reserved;
 use ach\fileControlRecord\blocks\TotalCreditEntryDollarAmount;
 use ach\fileControlRecord\blocks\TotalDebitEntryDollarAmount;
 use ach\Row;
@@ -23,6 +23,7 @@ use ach\Row;
 class FileControlRecord extends Row
 {
     protected $_blocks = [];
+    const RECORD_TYPE_CODE = '9';
 
     function __construct(
         $totalNumberOfBatchHeaders,
@@ -34,14 +35,14 @@ class FileControlRecord extends Row
     )
     {
         $this->_blocks = [
-            new RecordTypeCode(),
+            new RecordTypeCode(self::RECORD_TYPE_CODE),
             new BatchCount($totalNumberOfBatchHeaders),
             new BlockCount($totalNumberOfBlocks),
             new EntryAddendaCount($entryAddendaCount),
             new EntryHash($entryHash),
             new TotalDebitEntryDollarAmount($totalDebitEntryDollarAmount),
             new TotalCreditEntryDollarAmount($totalCreditEntryDollarAmount),
-            new Reserved(),
+            new Reserved(39),
         ];
     }
 }

@@ -2,18 +2,13 @@
 
 namespace ach\header\blocks;
 
-use ach\block\NonFillableBlock;
+use ach\block\FillableAlphamericBlock;
 
-class ReferenceCode extends NonFillableBlock
+class ReferenceCode extends FillableAlphamericBlock
 {
 
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 8;
-    }
-
-    protected function setContent()
-    {
-        $this->_content = str_pad('', 8);
     }
 }

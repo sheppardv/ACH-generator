@@ -2,26 +2,12 @@
 
 namespace ach\fileControlRecord\blocks;
 
-use ach\block\FillableBlock;
+use ach\block\FillableNumericBlock;
 
-class EntryHash extends FillableBlock
+class EntryHash extends FillableNumericBlock
 {
-
-    protected $_allowed_characters_regexp = "/^[0-9]+$/";
-
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 10;
-    }
-
-    protected function setContent($entryHash)
-    {
-        $entryHash = strval($entryHash);
-        $this->_content = str_pad(
-            $entryHash,
-            $this->getRequiredLength(),
-            '0',
-            STR_PAD_LEFT
-        );
     }
 }

@@ -7,7 +7,7 @@ use ach\block\NonFillableBlock;
 class FormatCode extends NonFillableBlock
 {
 
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 1;
     }

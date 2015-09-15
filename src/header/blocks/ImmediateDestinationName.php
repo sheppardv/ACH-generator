@@ -6,7 +6,7 @@ use ach\block\NonFillableBlock;
 
 class ImmediateDestinationName extends NonFillableBlock
 {
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 23;
     }

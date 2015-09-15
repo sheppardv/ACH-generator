@@ -2,26 +2,12 @@
 
 namespace ach\fileControlRecord\blocks;
 
-use ach\block\FillableBlock;
+use ach\block\FillableNumericBlock;
 
-class EntryAddendaCount extends FillableBlock
+class EntryAddendaCount extends FillableNumericBlock
 {
-
-    protected $_allowed_characters_regexp = "/^[0-9]+$/";
-
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 8;
-    }
-
-    protected function setContent($entryAddendaCount)
-    {
-        $entryAddendaCount = strval($entryAddendaCount);
-        $this->_content = str_pad(
-            $entryAddendaCount,
-            $this->getRequiredLength(),
-            '0',
-            STR_PAD_LEFT
-        );
     }
 }

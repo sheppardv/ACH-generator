@@ -7,7 +7,7 @@ use ach\block\NonFillableBlock;
 class BlockingFactor extends NonFillableBlock
 {
 
-    protected function getRequiredLength()
+    public function getRequiredLength()
     {
         return 2;
     }
