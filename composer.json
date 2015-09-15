@@ -1,0 +1,16 @@
+{
+    "name": "dev/ach",
+    "authors": [
+        {
+            "name": "sheppard",
+            "email": "vivchar.danylo@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "autoload": {
+        "psr-4": {"ach\\": "src/"}
+    }
+}
