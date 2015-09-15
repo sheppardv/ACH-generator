@@ -9,7 +9,7 @@ use ach\commonBlocks\Reserved;
 use ach\fileControlRecord\blocks\BatchCount;
 use ach\fileControlRecord\blocks\BlockCount;
 use ach\fileControlRecord\blocks\EntryAddendaCount;
-use ach\fileControlRecord\blocks\EntryHash;
+use ach\commonBlocks\EntryHash;
 use ach\fileControlRecord\blocks\TotalCreditEntryDollarAmount;
 use ach\fileControlRecord\blocks\TotalDebitEntryDollarAmount;
 use ach\Row;

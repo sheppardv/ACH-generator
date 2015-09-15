@@ -1,6 +1,6 @@
 <?php
 
-namespace ach\fileControlRecord\blocks;
+namespace ach\commonBlocks;
 
 use ach\block\FillableNumericBlock;
 

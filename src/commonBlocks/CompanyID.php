@@ -1,6 +1,6 @@
 <?php
 
-namespace ach\BatchHeaderRecord\blocks;
+namespace ach\commonBlocks;
 
 use ach\block\FillableAlphamericBlock;
 

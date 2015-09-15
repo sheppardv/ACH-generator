@@ -5,7 +5,7 @@ namespace ach\EntryDetailRecord;
 use ach\commonBlocks\ODFIID;
 use ach\commonBlocks\RecordTypeCode;
 use ach\EntryDetailRecord\blocks\AgendaRecordIndicator;
-use ach\EntryDetailRecord\blocks\Amount;
+use ach\commonBlocks\Amount;
 use ach\EntryDetailRecord\blocks\DiscretionaryData;
 use ach\EntryDetailRecord\blocks\IIN;
 use ach\EntryDetailRecord\blocks\IndividualName;
@@ -40,7 +40,7 @@ class EntryDetailRecord extends Row
             new RDFIID($RDFIID),
             new RDFIIDCheckDigit($RDFIID),
             new RDFIAccountNumber($RDFIAccountNumber),
-            new Amount($amount),
+            new Amount($amount, 10),
             new IIN($iin),
             new IndividualName($name),
             new DiscretionaryData(''),
