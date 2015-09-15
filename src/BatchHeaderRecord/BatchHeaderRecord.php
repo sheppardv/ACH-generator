@@ -4,10 +4,7 @@ namespace ach\BatchHeaderRecord;
 
 use ach\BatchHeaderRecord\blocks\BatchNumber;
 use ach\BatchHeaderRecord\blocks\CompanyName;
-use ach\BatchHeaderRecord\blocks\ODFIID;
-use ach\block\Block;
-
-
+use ach\commonBlocks\ODFIID;
 use ach\commonBlocks\RecordTypeCode;
 use ach\commonBlocks\Reserved;
 use ach\BatchHeaderRecord\blocks\CompanyDescriptiveDate;
